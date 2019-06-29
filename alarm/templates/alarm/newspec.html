@@ -1,0 +1,133 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact V9</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static 'alarm/images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'alarm/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'alarm/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'alarm/fonts/iconic/css/material-design-iconic-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'alarm/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'alarm/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'alarm/vendor/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'alarm/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'alarm/vendor/daterangepicker/daterangepicker.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'alarm/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'alarm/css/main.css' %}">
+<!--===============================================================================================-->
+        <style> 
+        body{background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ZZETMAR79FOEpkDunyufr_id9zWR7gp7Z_7nwreeQUueTsf4);
+                background-repeat:no-repeat;
+                background-size: cover;
+                margin: 0 auto;}
+        </style>
+</head>
+<body>
+
+
+	<div class="container-contact100">
+		
+
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					정보를 입력해주세요! 
+				</span>
+
+				<form action="{% url 'create' %}">
+				<div class="wrap-input100 validate-input" data-validate="Please enter your name">
+					<input class="input100" type="text" name="tof" placeholder="토플:">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Please enter your message">
+					<input class="input100" type="text" name="gpa" placeholder="학점:">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Please enter your message">
+					<input class="input100" name="when" placeholder="파견기간:">
+					<span class="focus-input100"></span>
+                </div>
+                
+				<div class="wrap-input100 validate-input" data-validate = "Please enter your message">
+                        <input class="input100" name="country" placeholder="파견나라:">
+                        <span class="focus-input100"></span>
+                    </div>                
+                
+                <div class="wrap-input100 validate-input" data-validate = "Please enter your message">
+                            <input class="input100" name="univ_name" placeholder="파견학교:">
+                            <span class="focus-input100"></span>
+                    </div>
+
+                <div class="wrap-input100 validate-input" data-validate = "Please enter your message">
+                            <input class="input100" name="kor_name" placeholder="재학 중인 학교:">
+                            <span class="focus-input100"></span>
+                    </div>
+
+                <div class="wrap-input100 validate-input" data-validate = "Please enter your message">
+                            <input class="input100" name="depart" placeholder="학과:">
+                            <span class="focus-input100"></span>
+                    </div>
+				<div class="container-contact100-form-btn">
+					<div class="container-contact100-form-btn">
+					<input class="contact100-form-btn" type="submit" value="제출하기">
+					</div>
+				</div>
+			</form>
+		</form>
+
+			<div class="contact100-more">
+				Contact our 24/7 call center: <span class="contact100-more-highlight">+001 345 6889</span>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="{% static 'alarm/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'alarm/vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'alarm/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'alarm/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'alarm/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'alarm/vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'alarm/vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'alarm/vendor/countdowntime/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
+	<script src="alarm/js/map-custom.js"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'alarm/js/main.js' %}"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+</html>

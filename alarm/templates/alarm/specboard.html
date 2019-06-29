@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+    <style> 
+    body{background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ZZETMAR79FOEpkDunyufr_id9zWR7gp7Z_7nwreeQUueTsf4);
+            background-repeat:no-repeat;
+            background-size: cover;
+            margin: 0 auto;}
+    </style>
+</head>
+<h1>스펙 공유 페이지</h1>
+<a class="btn btn-primary btn-round btn-lg" href="{% url 'new' %}">스펙 입력하기</a>
+<br><br>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">시기</th>
+        <th scope="col">국가</th>
+        <th scope="col">파견학교</th>
+        <th scope="col">본교</th>
+        <th scope="col">학과</th>
+        <th scope="col">토플</th>
+        <th scope="col">학점</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for spec in specs.all %}
+          <tr>
+          <th scope="row">{{ spec.id }}</th>
+          <td>{{ spec.when }}</td>
+          <td>{{ spec.country}}</td>
+          <td>{{ spec.univ_name }}</td>
+          <td>{{ spec.kor_name }}</td>
+          <td>{{ spec.depart }}</td>
+          <td>{{ spec.tof }}</td>
+          <td>{{ spec.gpa }}</td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
